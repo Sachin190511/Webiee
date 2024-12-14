@@ -1,0 +1,214 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  padding: 20px;
+  margin: 0;
+  color: #333;
+}
+
+/* Heading Styles */
+h1 {
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem; /* Prominent heading */
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  animation: fadeIn 1.5s ease-out;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Styles */
+p {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #495057;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+/* Subheading Styles (for Dates) */
+h4 {
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize; /* Ensure proper styling for date text */
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 1.8s ease-out forwards;
+  animation-delay: 0.5s; /* Slight delay after the main heading */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+h4:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for headings */
+h1:hover {
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Album Grid Layout */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 25px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+/* Styling for album thumbnails */
+.album img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  filter: grayscale(20%); /* Adds a slight grayscale for a professional look */
+}
+
+.album img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* Optional: Add a fade-in effect for the grid of images */
+.album-grid a {
+  opacity: 0;
+  animation: fadeInImage 2s ease-out forwards;
+}
+
+.album-grid a:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.album-grid a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.album-grid a:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.album-grid a:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.album-grid a:nth-child(5) {
+  animation-delay: 1s;
+}
+.album-grid a:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.album-grid a:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.album-grid a:nth-child(8) {
+  animation-delay: 1.6s;
+}
+.album-grid a:nth-child(9) {
+  animation-delay: 1.8s;
+}
+.album-grid a:nth-child(10) {
+  animation-delay: 2s;
+}
+.album-grid a:nth-child(11) {
+  animation-delay: 2.2s;
+}
+.album-grid a:nth-child(12) {
+  animation-delay: 2.4s;
+}
+.album-grid a:nth-child(13) {
+  animation-delay: 2.6s;
+}
+.album-grid a:nth-child(14) {
+  animation-delay: 2.8s;
+}
+.album-grid a:nth-child(15) {
+  animation-delay: 3s;
+}
+.album-grid a:nth-child(16) {
+  animation-delay: 3.2s;
+}
+.album-grid a:nth-child(17) {
+  animation-delay: 3.4s;
+}
+.album-grid a:nth-child(18) {
+  animation-delay: 3.6s;
+}
+.album-grid a:nth-child(19) {
+  animation-delay: 3.8s;
+}
+.album-grid a:nth-child(20) {
+  animation-delay: 4s;
+}
+.album-grid a:nth-child(21) {
+  animation-delay: 4.2s;
+}
+.album-grid a:nth-child(22) {
+  animation-delay: 4.4s;
+}
+.album-grid a:nth-child(23) {
+  animation-delay: 4.6s;
+}
+.album-grid a:nth-child(24) {
+  animation-delay: 4.8s;
+}
+.album-grid a:nth-child(25) {
+  animation-delay: 5s;
+}
+.album-grid a:nth-child(26) {
+  animation-delay: 5.2s;
+}
+.album-grid a:nth-child(27) {
+  animation-delay: 5.4s;
+}
+.album-grid a:nth-child(28) {
+  animation-delay: 5.6s;
+}
+.album-grid a:nth-child(29) {
+  animation-delay: 5.8s;
+}
+.album-grid a:nth-child(30) {
+  animation-delay: 6s;
+}
+
+
+/* Fade-in animation for images */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

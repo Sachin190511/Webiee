@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transform-origin: center center;
+            transform: scale(1); /* Default scale */
+            transition: transform 0.1s ease-in-out; /* Smooth zoom effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="zoomImage" src="./Image-Gallery/Terms and Condition.jpg" alt="Terms and Conditions">
+    </div>
+
+    <script>
+        const img = document.getElementById('zoomImage');
+        let scale = 1; // Initial scale
+
+        // Add event listener for scroll
+        window.addEventListener('wheel', (event) => {
+            event.preventDefault(); // Prevent default scrolling behavior during zoom
+            // Adjust zoom level
+            if (event.deltaY > 0) {
+                scale -= 0.1; // Zoom out
+            } else {
+                scale += 0.1; // Zoom in
+            }
+
+            // Set limits for zoom
+            scale = Math.max(0.5, Math.min(scale, 3)); // Between 0.5x and 3x
+
+            // Apply the scaling
+            img.style.transform = `scale(${scale})`;
+        });
+    </script>
+</body>
+</html>

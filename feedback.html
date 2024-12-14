@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="Feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>RATE EVERNOTE WEB</h1>
+        <div class="rating-section">
+            <div class="rating-question">Is easy to use</div>
+            <div class="stars" id="easeOfUse-stars-container" data-rating="0"></div>
+        </div>
+        <div class="rating-section">
+            <div class="rating-question">Has the features I want</div>
+            <div class="stars" id="features-stars-container" data-rating="0"></div>
+        </div>
+        <div class="rating-section">
+            <div class="rating-question">Feels fast and responsive</div>
+            <div class="stars" id="speed-stars-container" data-rating="0"></div>
+        </div>
+        <div class="rating-section">
+            <div class="rating-question">Is reliable</div>
+            <div class="stars" id="reliability-stars-container" data-rating="0"></div>
+        </div>
+
+        <div class="feedback-input-section">
+            <label for="feedback-input">Your feedback:</label>
+            <textarea id="feedback-input" placeholder="Remember to be nice please!"></textarea>
+        </div>
+
+        <div class="consent-section">
+            <input type="checkbox" id="email-consent">
+            <label for="email-consent">It’s OK to email me more questions in the future</label>
+        </div>
+
+        <div class="button-container">
+            <button class="button cancel-button" onclick="location.href='index.html';">Cancel</button>
+            <button class="button done-button" onclick="submitFeedback()">Done</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="feedback.js" defer></script>
+</body>
+
+</html>

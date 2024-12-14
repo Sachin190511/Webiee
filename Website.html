@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <title>Webiee</title>
+  <!-- adding a fav-icon -->
+  <link rel="icon"
+    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+    type="image/x-icon" />
+
+  <script src="index.js" defer></script>
+  <script src="Theme.js" defer></script>
+
+  <link rel="stylesheet" href="path/to/aos.css">
+  <script src="path/to/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("WB9rAyWwwLZube-er");
+    })();
+
+    function planTrip() {
+
+      window.location.href = 'plantrip.html';
+    }
+    // const menuButton = document.getElementsByClassName('link');
+    function closeNav(){
+      let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+    }
+    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+    
+
+  </script>
+
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <style>
+
+   .active {
+      color: red !important;
+    }
+      </style>
+
+</head>
+
+
+<body style="background-color: var(--secondary-color);">
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">Content</div>
+        <div class="col-md-6 col-sm-12">Content</div>
+      </div>
+    </div>
+    
+
+    <div id="pre-loader">
+      <h1>Love you . . .</h1>
+    </div>
+    <div id="bg">
+      <canvas></canvas>
+      <canvas></canvas>
+      <canvas></canvas>
+    </div>
+    <div class="nav-container">
+      <nav class="newNav" id="navbar">
+        <a href="#" class="nav__logo" data-aos="fade-right">Webiee<span>.</span></a>
+
+        <ul class="navLinks">
+
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs">About Us</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#fav">Favorites</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#family">Family</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="./feedback.html">Rate Us?</a></li>
+
+
+        </ul>
+        <div class="toggle-container" data-aos="fade-down">
+          <input id="themeToggle" class="toggle" type="checkbox">
+        </div>
+        <div class="hamburger" data-aos="fade-down">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
+    <header>
+      <section class="section__container header__container" id="Home">
+        <div class="header__image" data-aos="fade-down-right">
+          <img src="./Image-Gallery/2.jpg" alt="header" />
+          <img src="./Image-Gallery/3.jpg" alt="header" />
+        </div>
+        <div class="header__content">
+          <div>
+            <h1 data-aos="fade-in">You are my Best Match<br />Lucky to have <br>you my <br><span
+                class="auto-typed" style="color: var(--head-text);"></span></h1>
+            <p class="section__subtitle" data-aos="fade-in">
+              At the Beginning we ✌️started becoming friends🥰
+              <br>And now we are in love🫰. It will never fade♾️
+              <br>Love you so much as always💕💗🫂
+            </p>
+            <div class="action__btns">
+
+            </div>
+            <br>
+            
+          </div>
+        </div>
+
+        <script>
+          window.onload = function () {
+              const navbar = document.getElementById('navbar');
+              const loggedInUser = localStorage.getItem('loggedInUser');
+      
+              if (loggedInUser) {
+                  navbar.innerHTML = `Welcome, ${loggedInUser}!`;
+              } else {
+                  navbar.innerHTML = `<a href="sign-in.html">Login</a>`;
+              }
+          };
+      </script>      
+        
+        
+      </section>
+    </header>
+    
+<div class="fade-in">
+    <br>
+    <!-- Section of About Us -->
+<section class="About" id="AboutUs">
+
+  
+  <div class="color col-12">
+    <div class="section__container about__container">
+      <!-- Left background color column -->
+      <div class="col-8 bg primary"></div>
+      <!-- Right content container -->
+      <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+        <div class="aboutcon">
+          <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
+            <h1 class="headingofAbout section__title " data-aos=" fade-in"><b>About Us</b></h1>
+            <!-- Article with about us content -->
+            <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
+              <!-- Adding the content -->
+              <style>
+                /* CSS for hover effect */
+                .aboutcontent:hover {
+                  transform: scale(1.1); 
+                  transition: transform 0.8s ease; 
+                }
+              </style>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Hey!! My dear girl 🥰The day we started talking after a huge consequences that you know about me in the school days🥲 that we can't talk to each other for 7 year's🥺 . Those hard days is still in my heart😣 which i can't even express that what I felt 😞. It's very hard to face 🫂, but the day we met each other in Jee Advance (June 4 2023)💗.The day was a miracle for me💫, I did'nt even expect that i will see you there🥹 .Thanks for my mom that she came up to see you and talk 🩵. If that does'nt happened I will be Alone in my Life🫠. 
+              </p>
+
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span> And The Other day which is special to us💫 is The day we come up to see each other and confesed that we are commited to each other💗 . It is a heart bonding day for us(🖤Nov 4 2023🖤) . Which is my whole life's dream🫂 that i need you untill my life ends♾️. "In your eyes👀, I see my future👨‍👩‍👧‍👦, and in your smile😊, I find my happiness🥰".My love💕 for you is like a never-ending journey♾️. I want every step🌍 of that journey to be with you💞. "In your eyes👀, I've found a love deeper💗 than the ocean🌊, and in your heart🫀, I've found my forever home🏡. Will you marry me💍, my love💗, my life💞, and my everything🌍".
+              </p>
+
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>"From this day forward🤗, let's write a new chapter together💞 as husband🚶‍♂️‍➡️ and wife🚶🏻‍♀️. Will you marry me💍 and start this beautiful journey?♾️".I want to be your partner💕 in all the adventures life🫂 has in store for us🏡. Will you make me the happiest🥹 by staying with me💞 to the rest of my life♾️. I wanted only you in my life🥺 and hold you as my baby🫂 in my arms💕. I'll make you the happiest girl🥹 and i'll try to resolve the mistakes🥺 i make. I'll be the one who will be standing behind😉 you in the any saddness in your life and be with you in happiness too.💗
+              </p>
+              <p class="aboutcontent1" data-aos="fade-in" style="text-align: justify;">
+                <strong><span style="margin-left: 250px;"></span> "I love you💞 more than I did yesterday🧚‍♀️ but not more than I will tomorrow.🥰"
+                  Charu!!🫂</strong>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>   
+
+            </div>
+            <!-- Right statistics container -->
+            <div data-aos="fade-left" class="col-6">
+
+              <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
+               
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+    <br><br>
+    <!-- ending the section of About Us -->
+
+    <!-- Newsletter Modal -->
+
+
+
+
+
+      <!-- slideshow -->
+      <div class="slideshow-container" data-aos="fade-up">
+
+        
+        <!-- Next and previous buttons -->
+        <div class="destination__nav">
+          <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
+          <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
+        </div>
+
+        
+
+        
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+          <img src="./Image-Gallery/images/Image1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="./Image-Gallery/images/Image2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="./Image-Gallery/images/Image3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="./Image-Gallery/images/Image4.jpg" style="width:100%">
+        </div>
+        <div class="imageDots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+ 
+
+    <section class="trip" id="fav" data-aos="zoom-in" data-aos-offset="100">
+      <div class="section__container trip__container">
+        <h2 class="section__title">My Favorites</h2>
+        <p class="section__subtitle">
+          The Pictures I loved that 🫀placed deep inside my heart!! <br>
+          Lovable memories😘!!
+        </p>
+        <div class="trip__grid">
+          <div class="trip__card">
+            <img src="./Image-Gallery/images/Image5.jpg" alt="trip"  width="45" />
+
+          </div>
+          <div class="trip__card">
+            <img src="./Image-Gallery/images/Image6.jpg" alt="trip"  width="45" />
+            
+          </div>
+          <div class="trip__card">
+            <img src="./Image-Gallery/images/Image9.jpg" alt="trip"  width="45" />
+
+          </div>
+        </div>
+        <div class="view__all">
+        </div><a href="./package.html"><button class="btn" id="btn-style">View All</button></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="gallary" id="ReviewGallery">
+      <div class="section__container gallary__container">
+        <div class="section__container gallary__container" id="originalDiv">
+          <div class="image__gallary">
+            <div class="gallary__col" data-aos="zoom-in">
+              <img src="./Image-Gallery/images/Image7.jpg" alt="gallary" />
+            </div>
+            <div class="gallary__col" data-aos="zoom-in">
+              <img src="./Image-Gallery/images/Image8.jpg" alt="gallary" />
+              <img src="./Image-Gallery/images/Image0.jpg" alt="gallary" />
+            </div>
+          </div>
+          <div class="gallary__content">
+            <div>
+              <h2 class="section__title" data-aos="zoom-in">
+                Our gallery that will inspire you
+              </h2>
+              <p class="section__subtitle" data-aos="zoom-in">
+                These are the short memories to gain through our journey🥹. Those days with an unbeatable Happiness💗.
+              </p>
+              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in">View All</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><br><br>
+    <!-- New div components (hidden initially) -->
+    <div id="newDiv" style="display: none;" data-aos="zoom-in">
+      <!-- Sliding Animated Gallery -->
+      <div class="gallery-rotate-image">
+        <div class="image-container">
+          <span style="--i : 1">
+            <img src="./Image-Gallery/1.jpg">
+          </span>
+          <span style="--i : 2">
+            <img src="./Image-Gallery/2.jpg">
+          </span>
+          <span style="--i : 3">
+            <img src="./Image-Gallery/4.jpg">
+          </span>
+          <span style="--i : 4">
+            <img src="./Image-Gallery/5.jpg">
+          </span>
+          <span style="--i : 5">
+            <img src="./Image-Gallery/12.jpg">
+          </span>
+          <span style="--i : 6">
+            <img src="./Image-Gallery/11.jpg">
+          </span>
+          <span style="--i : 7">
+            <img src="./Image-Gallery/8.jpg">
+          </span>
+          <span style="--i : 8">
+            <img src="./Image-Gallery/9.jpg">
+          </span>
+          <span style="--i : 9">
+            <img src="./Image-Gallery/10.jpg">
+          </span>
+
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-style" id="prev">Prev</button>
+        <button class="btn btn-style" id="next">Next</button>
+      </div>
+      <!-- Trip Photo Gallery -->
+      <div class="trip-gallery-container">
+        <img src="./Image-Gallery/3.jpg"  width="200">
+        <img src="./Image-Gallery/6.jpg"  width="200">
+        <img src="./Image-Gallery/7.jpg"  width="200">
+        <img src="./Image-Gallery/13.jpg"  width="200">
+        <img src="./Image-Gallery/14.jpg"  width="200">
+        <img src="./Image-Gallery/15.jpg"  width="200">
+        <img src="./Image-Gallery/16.jpg"  width="200">
+        <img src="./Image-Gallery/17.jpg"  width="200">
+        <img src="./Image-Gallery/18.jpg"  width="200">
+        <img src="./Image-Gallery/19.jpg"  width="200">
+        <img src="./Image-Gallery/20.jpg"  width="200">
+        <img src="./Image-Gallery/21.jpg"  width="200">
+        <img src="./Image-Gallery/22.jpg"  width="200">
+        <img src="./Image-Gallery/23.jpg"  width="200">
+        <img src="./Image-Gallery/24.jpg"  width="200">
+        <img src="./Image-Gallery/25.jpg"  width="200">
+        <img src="./Image-Gallery/28.jpg"  width="200">
+        <img src="./Image-Gallery/27.jpg"  width="200">
+      </div>
+    </div>
+
+
+    <!-- Testimonials Section -->
+
+    <section class="testimonials" id="family">
+      <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Family</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-user" data-aos="fade-up">
+          <img class="testi-img" src="./Image-Gallery/Aas.jpg" alt="">
+          <div>
+            <p><sup><i class="fas fa-quote-left"></i></sup>My mother who cares me like their small 
+              child. Mother for a Reason . She is being a character who cares my girl, The Best!!.Inocent Mother but she is the 
+              one who guides the way I'm.
+              <h5 style="color: blueviolet;">Mother</h5><sup><i class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3 style="font-size: 23px;">Aaslin</h3>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-user" data-aos="fade-up">
+          <img class="testi-img" src="./Image-Gallery/Yam.jpg" alt="">
+          <div>
+            <p><sup><i class="fas fa-quote-left"></i></sup>My sister who guides me when I'm in the wrong
+              path way.And a Supportive sister even at every situation, No matter what the thing is.. The way she helps me <h5 style="color: blueviolet;"> Big Sister</h5><sup><i
+                  class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3 style="font-size: 23px;">Yamini</h3>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-user" data-aos="fade-up">
+          <img class="testi-img" src="./Image-Gallery/Razz.jpg" alt="Razz">
+          <div>
+            <p><sup><i class="fas fa-quote-left"></i></sup>The cloned pair of mine. The same stupid child play of mine. Thank you for keeping my girl safe and making smile in every situation!!Smile at every Moment..<h5 style="color: blueviolet;">Sissy</h5><sup><i class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3 style="font-size: 23px;">Razvi</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section> 
+
+   
+<br> <br> <br>
+    <footer class="footer" data-aos="fade-up">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3 class="footer__title">Webiee<span>.</span></h3>
+          <p class="footer__text">
+            This is a website for you my dear girl🫂 u can see all the images💫 here I have created This for you..
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__subtitle">Support</h4>
+          <a href="./tnc.html" class="footer__link">Terms & Conditions</a>
+          
+        </div>
+        <div class="footer__col">
+          <h4>Address</h4>
+<div class="mapouter"><div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=11.003306,%2076.981519&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+  
+  <style>
+  .mapouter{position:relative;
+  text-align:LEFT;
+  height:200px;
+  width:200px;
+  }
+  </style>
+  <a href="https://www.embedgooglemap.net"></a>
+  <style>
+  .gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:417px;
+    width:449px;
+    }
+    </style>
+    </div>
+  </div>
+        </div>
+        <div class="footer__col">
+          <h4>Reach Out To Us</h4>
+          <p><span>Email:</span> sachin11jg@gmail.com</p>
+          <p><span>Phone:</span> +91 809887234</p>
+        </div>
+      </div>
+
+      <div class="modal-container">
+        <div class="cross-container">
+          <form id="modal-form">
+  
+        </div>
+      
+<!--  New copyright code to make it dynamic and display current year -->
+      <div class="footer__bar">
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Kishore Sachin J G. All rights reserved. </li>
+        </div>
+      </div>
+      
+
+<!--  <div class="footer__bar">
+        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      </div> -->
+      
+    </footer>
+    <!-- adding a btn -->
+    <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
+        style="color: #00328a;"></i></button>
+    <script>
+      // Get the button
+      var mybutton = document.getElementById("goToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function goToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <script>
+      let hamburger = document.querySelector('.hamburger');
+      hamburger.addEventListener('click', () => {
+        let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+      })
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        offset: 120
+      });
+    </script>
+
+    <!-- typing animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-typed", {
+        strings: ["Princess", "Soulmate", "Wifey"],
+        typeSpeed: 150,
+        backSpeed: 50,
+        loop: true
+      })
+    </script>
+
+    <script src="index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+      let pre = document.querySelector('#pre-loader');
+      window.addEventListener("load", function () {
+        pre.style.display = "none";
+      })
+    </script>
+
+    <script>
+      
+// To highlight active navbar
+document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('.navLinks a');
+
+      function highlightNavLink() {
+        const scrollPosition = window.scrollY;
+
+        navLinks.forEach(link => {
+          const sectionId = link.getAttribute('href').substring(1);
+          const section = document.getElementById(sectionId);
+
+          // Adjust this value to control when the link should be highlighted
+          const offsetPercentage = 20;
+
+          if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+            section.offsetTop + section.offsetHeight > scrollPosition) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      document.addEventListener('scroll', highlightNavLink);
+      window.addEventListener('resize', highlightNavLink);
+
+      // Initialize AOS library
+      AOS.init();
+    });</script>
+    <script>
+
+      let progress = document.getElementById("progressbar");
+
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function () {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+
+    </script>
+
+
+
+  </body>
+  <script>
+    function replaceDivs() {
+      // Get references to the original and new divs
+      var originalDiv = document.getElementById("originalDiv");
+      var newDiv = document.getElementById("newDiv");
+
+      // Check if the original div exists
+      if (originalDiv) {
+        // Hide the original div
+        originalDiv.style.display = "none";
+
+        // Show the new div
+        newDiv.style.display = "block";
+      }
+    }
+  </script>
+  <script src="./Image-Gallery/script.js"></script>
+  <script src="./index.js"></script>
+  
+  <!--  Adding copyright javascript code to make it dynamic and display current year -->
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
+</html><!-- New bubble background start -->
+
+    
+<div class="bubbles">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  
+
+</div>
+<!-- New bubble background end -->

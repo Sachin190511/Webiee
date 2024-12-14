@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./styles1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form name ="submit-to-google-sheet" action="save_registration.php" method="POST" id="registrationForm">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" name="fullname" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" name="email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <i class='bx bx-show'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirmPassword" required>
+                <i class='bx bx-show'></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" placeholder="Phone Number" name="phone">
+                <i class='bx bxs-phone'></i>
+            </div>
+            <div class="input-box">
+                <input type="date" name="dob">
+                <i class='bx bx-calendar'></i>
+            </div>
+            <div class="input-box select-box">
+                <select name="gender" class="styled-select">
+                    <option value="" disabled selected>Choose Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>            
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="index.html">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelectorAll('.bx-show').forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                var input = this.previousElementSibling;
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    this.classList.remove('bx-show');
+                    this.classList.add('bx-hide');
+                } else {
+                    input.type = 'password';
+                    this.classList.remove('bx-hide');
+                    this.classList.add('bx-show');
+                }
+            });
+        });
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzBDM0Xni5SwX32dU2p_iAvzK6k0i__TX9ceLIhht0JNxZN9aqDP1RBAXyc6hlwTWzB/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+
+    </script>
+</body>
+</html>
